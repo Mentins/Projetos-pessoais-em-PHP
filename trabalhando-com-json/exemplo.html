@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        // SE FAZ A REQUISIÇÃO DOS DADOS DO OBJETO PARA VIACEP;
+        $.getJSON('https://viacep.com.br/ws/01001000/json/', function(dados){
+            //console.log(dados);
+
+            // ENVIA O OBJETO RECEBIDO PARA A FUNÇÃO enviaParaPHP;
+            enviaParaPHP(dados);
+        });
+        function enviaParaPHP(dados){
+            // TRANSFORMA O OBJETO RECEBIDO EM STRING E O ENVIA PARA INDEX.PHP, PASSANDO VIA AJAX PARA O MÉTODO POST O OBJETO EM FORMATO DE TEXTO;  
+            var json = JSON.stringify(dados);
+            $.ajax({
+                url: 'index.php',
+                data: {texto: json},
+                type: 'POST',
+                // CASO OBTENHA SUCESSO NO ENVIO, RETORNARÁ O OBEJTO NO CONSOLE COM A NOVA PROPRIEDADE ALUNO QUE FOI INSERIDA ATRAVÉS DO PHP;
+                success: function(retorno){
+                    var objeto = JSON.parse(retorno)
+                    console.log(objeto);
+                },
+                // CASO OBTENHA ERRO NO ENVIO, RETORNARÁ UM ALERTA DIZENDO QUE OCORREU UM ERRO
+                error: function(erro){
+                    alert('[ERRO...] Ocorreu um erro inesperado')
+                }
+            })
+        }
+    </script>
+</body>
+</html>
