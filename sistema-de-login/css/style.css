@@ -1,0 +1,169 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #eee;
+    margin: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    font-family: sans-serif;
+}
+
+form {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: center;
+    max-width: 400px;
+    padding: 40px 20px 20px;
+    background-color: white;
+    border-radius: 30px;
+    box-shadow: 0px 0px 20px #bebebe;
+}
+
+h1 {
+    font-size: 2rem;
+    width: 100%;
+    text-align: center;
+    font-weight: 900;
+}
+
+input {
+    width: 95%;
+    height: 60px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    margin-bottom: 15px;
+    margin-left: 5%;
+    padding-left: 20%;
+}
+
+input:focus{
+    outline-color: #00c3ff;
+}
+
+input[type='checkbox']{
+    display: inline-block;
+    height: 20px;
+    width: 5%;
+    vertical-align: middle;
+}
+
+label{
+    display: inline-block;
+    width: 85%;
+    font-size: 13px;
+    margin-top: 15px;
+    cursor: pointer;
+}
+
+.btn-blue {
+    width: 90%;
+    margin: 20px 0px 20px 0px;
+    padding: 20px;
+    cursor: pointer;
+    background-color: #00c3ff;
+    border: none;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: 0.3s ease;
+}
+
+.btn-blue:hover{
+    background-color: #0395c2;
+}
+
+p{
+    width: 100%;
+    text-align: center;
+}
+
+a{
+    text-decoration: none;
+    color: #00c3ff;
+    margin-bottom: 20px;
+    font-size: 10px;
+}
+
+.right-left{
+    text-align: justify;
+}
+
+.link {
+    color: #00c3ff;
+}
+
+.input-group{
+    width: 90%;
+}
+
+.input-icon {
+    width: 60px;
+    position: absolute;
+    
+}
+
+.erro-geral {
+    background-color: rgb(247, 74, 74);
+    padding: 20px;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    color: white;
+    font-weight: bold;
+}
+
+.erro-input{
+    border: 1px solid rgb(247, 74, 74);
+}
+
+.erro{
+    color: rgb(247, 74, 74);
+    text-align: center;
+    margin-bottom: 10px;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.sucesso {
+    background-color: rgb(94, 197, 54);
+    padding: 20px;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    color: white;
+    font-weight: bold;
+    transition: .5s;
+}
+
+.oculto{
+    display: none;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.gmail {
+    text-align: center;
+    padding: 20px;
+    color: white;
+    background-image: linear-gradient(to right, #43b9fd,#EA4335, #FCBC03);
+    border-radius: 5px;
+    width: 50%;
+}
+
+.outlook {
+    margin-top: -20px;
+    text-align: center;
+    padding: 20px;
+    color: white;
+    background-image: linear-gradient(to right, #0064B9, #23A9EB, #4FDAFF);
+    border-radius: 5px;
+    width: 50%;
+}
